@@ -1,6 +1,5 @@
 <?php
-
-require_once "conexion_db.php";
+include "conexion_db.php";
 error_reporting(0);
 session_start();
 
@@ -125,7 +124,7 @@ if (isset($_POST["submit"])) {
 				<li><span class="cerrar" onclick="ocultar()">X</span></li>
 				<li><a href="panel.php">INICIO</a></li>
 				<li><a href="Productos2.php">PRODUCTOS</a></li>
-				<li><a href="Consultoria.php">CONSULTORÍA</a></li>
+				<li><a href="consultoria.php">CONSULTORÍA</a></li>
 				<li><a href="login.php">INICIO DE SESIÓN</a></li>
 			</ul>
 		</nav>
