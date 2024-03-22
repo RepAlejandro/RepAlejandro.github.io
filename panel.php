@@ -1,6 +1,6 @@
 <?php
 
-include "loginrequired.php";
+include "loginrequired2.php";
 
 ?>
 
@@ -25,23 +25,25 @@ include "loginrequired.php";
 		</div>
 		<label class="logo">Consultores Caterpillar</label>
 		<ul id="menu-desplegable">
-		    <li><span class="cerrar" onclick="ocultar()">X</span></li>
-		    <li><a href="panel.php">INICIO</a></li>
-		    <li><a href="Productos2.php">PRODUCTOS</a></li>
-		    <li><a href="consultoria.php">CONSULTORÍA</a></li>
-		    <?php if ($rol == 2) { ?>
-		        <li><a href="panel.php">Configuración</a></li>
-		    <?php } ?>
-			<?php if (isset($_SESSION["token"])) { ?>
+			<li><span class="cerrar" onclick="ocultar()">X</span></li>
+			<li><a href="panel.php">INICIO</a></li>
+			<li><a href="Productos2.php">PRODUCTOS</a></li>
+			<li><a href="consultoria.php">CONSULTORÍA</a></li>
+			<?php if (isset($_SESSION["token"])) { 
+				
+				if ($rol == 2) { ?>
+					<li><a href="panel.php">Configuración</a></li>
+				<?php } ?>
 				<li><a href="logout.php">CERRAR SESIÓN</a></li>
 			<?php } else { ?>
 				<li><a href="login.php">INICIAR SESIÓN</a></li>
 			<?php } ?>
 		</ul>
-        <div class="logo3">
+		<div class="logo3">
 			<img src="Imágenes/2.png">
 		</div>
 	</nav>
+
 	<!--BANNER-->
 	<header>
 			<div class="banner">

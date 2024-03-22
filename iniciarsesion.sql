@@ -19,3 +19,9 @@ CREATE TABLE usuario (
     FOREIGN KEY (Id_Rol) REFERENCES roles (Id_Rol) ON DELETE SET NULL
 
 );
+
+--Para tener permisos de Administrador realizar un Update a la tabla usuario para actualizar: admin = 2
+
+--Update usuario SET Id_Rol = ? WHERE Id = ?
+
+--El usuario Admin puede ver en el nav la configuración, aunque la configuracion no hace nada y te reedirige al panel
