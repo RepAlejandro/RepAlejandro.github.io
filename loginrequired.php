@@ -5,7 +5,7 @@ if (!isset($_SESSION["token"])) {
     header("Location: login.php");
     exit();
 } else {
-    include "conexion_db.php"; 
+    require_once "conexion_db.php"; 
 
     $token = $_SESSION["token"];
 

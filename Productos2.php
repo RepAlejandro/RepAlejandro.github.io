@@ -26,7 +26,7 @@
 			<li><a href="panel.php">INICIO</a></li>
 			<li><a href="Productos2.php">PRODUCTOS</a></li>
 			<li><a href="consultoria.php">CONSULTORÍA</a></li>
-			<?php if ($rol == 1) { ?>
+			<?php if ($rol == 2) { ?>
 		        <li><a href="panel.php">Configuración</a></li>
 		    <?php } ?>
 			<li><a href="logout.php">CERRAR SESIÓN</a></li>

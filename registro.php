@@ -1,6 +1,6 @@
 <?php
 
-include "conexion_db.php";
+require_once "conexion_db.php";
 error_reporting(0);
 session_start();
 
@@ -34,7 +34,7 @@ if (isset($_POST["submit"])) {
         $result = mysqli_query($conexion, $check_email);
         if (mysqli_num_rows($result) == 0) {
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-            $sql = "INSERT INTO usuario (username, email, password, Id_Rol) VALUES ('$username', '$email', '$hashed_password', 2)";
+            $sql = "INSERT INTO usuario (username, email, password, Id_Rol) VALUES ('$username', '$email', '$hashed_password', 1)";
             if (mysqli_query($conexion, $sql)) {
             	 $correct  = "Usuario registrado correctamente";
                 $username = "";

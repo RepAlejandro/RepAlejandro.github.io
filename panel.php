@@ -1,5 +1,7 @@
 <?php
-	include "loginrequired.php";
+
+include "loginrequired.php";
+
 ?>
 
 <!DOCTYPE html>
@@ -27,10 +29,14 @@
 		    <li><a href="panel.php">INICIO</a></li>
 		    <li><a href="Productos2.php">PRODUCTOS</a></li>
 		    <li><a href="consultoria.php">CONSULTORÍA</a></li>
-		    <?php if ($rol == 1) { ?>
+		    <?php if ($rol == 2) { ?>
 		        <li><a href="panel.php">Configuración</a></li>
 		    <?php } ?>
-		    <li><a href="logout.php">CERRAR SESIÓN</a></li>
+			<?php if (isset($_SESSION["token"])) { ?>
+				<li><a href="logout.php">CERRAR SESIÓN</a></li>
+			<?php } else { ?>
+				<li><a href="login.php">INICIAR SESIÓN</a></li>
+			<?php } ?>
 		</ul>
         <div class="logo3">
 			<img src="Imágenes/2.png">
